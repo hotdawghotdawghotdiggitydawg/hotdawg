@@ -74,9 +74,9 @@ function create(){
 	wKey = game.input.keyboard.addKey
 		(Phaser.Keyboard.W);
 	aKey = game.input.keyboard.addKey
-		(Phaser.Keyboard.W);
+		(Phaser.Keyboard.a);
 	dKey = game.input.keyboard.addKey
-		(Phaser.Keyboard.W);
+		(Phaser.Keyboard.d);
 
 
 }
@@ -102,13 +102,10 @@ function update(){
 	}
 
 
-	if(cursors.up.isDown || wKey.isDown && player.body.touching.down){
+	if((cursors.up.isDown || wKey.isDown) && player.body.touching.down){
 		player.body.velocity.y = -300
 	}
 
-		wKey.isDown;
-		aKey.isDown;
-		dKey.isDown;
 
 
 }
