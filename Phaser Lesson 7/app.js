@@ -45,17 +45,17 @@ function create(){
 		player.animations.add('left', [0,1,2,3],10,true);
 		player.animations.add('right', [5,6,7,8],10,true);
 		game.physics.arcade.enable(player);
-		player.body.gravity.y = 600;
+		player.body.gravity.y = 300;
 		player.body.bounce.y = 0.4;
 		player.body.collideWorldBound = true;
 
 		//create enemy
 
-	baddie = game.add.sprite(32, 400, 'baddie')
+	baddie = game.add.sprite(30, 30, 'baddie')
 		baddie.animations.add('left', [0,1],10,true);
 		baddie.animations.add('right', [2,3],10,true);
 		game.physics.arcade.enable(baddie);
-		baddie.body.gravity.y = 999;
+		baddie.body.gravity.y = 600;
 		baddie.body.bounce.y = 0.4;
 		baddie.body.collideWorldBound = true;
 
