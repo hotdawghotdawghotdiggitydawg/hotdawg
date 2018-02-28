@@ -74,9 +74,9 @@ function create(){
 	wKey = game.input.keyboard.addKey
 		(Phaser.Keyboard.W);
 	aKey = game.input.keyboard.addKey
-		(Phaser.Keyboard.a);
+		(Phaser.Keyboard.A);
 	dKey = game.input.keyboard.addKey
-		(Phaser.Keyboard.d);
+		(Phaser.Keyboard.D);
 
 
 }
