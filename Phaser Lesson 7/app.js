@@ -71,9 +71,6 @@ function create(){
 	//create keyboard entries
 	cursors = game.input.keyboard.createCursorKeys();
 
-	}
-	}
-
 }
 
 function update(){
