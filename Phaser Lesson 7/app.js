@@ -107,9 +107,52 @@ function update(){
 	}
 
 
+	//lesson 9
+	game.physics.arcade.overlap(player, stars, collectStar);
+	game.physics.arcade.overlap(player, baddie, loseLife);
+
+	//call function move Enemy
+	moveEnemy();
+
+	if(lives = 0){
+		endGame()
+	}
+
 
 }
 
+function endGame(){
+	player.kill();
+	scoreLabel.text = "YOU DIED! You scored " + score;
+	scoretext.visible = false;
+	lifelabel.visible = false;
+	lifetext.visible = false;
+}
 
+function moveEnemy(){
+	if(baddie.x > 759){
+		baddie.animatins.play('left');
+		baddie.body.velocity.x = -120;
+	}else if(baddie.x < 405){
+		baddie.animatins.play('right');
+		baddie.body.velocity.x = 120;
+	}
 
+}
+
+function loseLife(player, baddie){
+	lives -= 1; //same as lives = lives -1
+	livetext.setText(lives);
+
+	baddie.kill();
+	baddie.reset(20,20);	
+}
+
+function collectStar(player, star){
+	score += 1;
+	scoretext.setText(score);
+
+	star.kill();
+	star.reset(Math.random()* 759, 0);
+}
 
