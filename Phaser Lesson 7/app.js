@@ -142,7 +142,7 @@ function moveEnemy(){
 
 function loseLife(player, baddie){
 	lives -= 1; //same as lives = lives -1
-	livetext.setText(lives);
+	lifetext.setText(lives);
 
 	baddie.kill();
 	baddie.reset(20,20);	
