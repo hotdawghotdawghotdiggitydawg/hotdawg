@@ -141,7 +141,7 @@ function moveEnemy(){
 }
 
 function loseLife(player, baddie){
-	lives -= 1; //same as lives = lives -1
+	lives = lives - 1; //same as lives = lives -1
 	lifetext.setText(lives);
 
 	baddie.kill();
