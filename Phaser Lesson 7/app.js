@@ -47,7 +47,7 @@ function create(){
 		game.physics.arcade.enable(player);
 		player.body.gravity.y = 280;
 		player.body.bounce.y = 0.4;
-		player.body.collideWorldBound = true;
+		player.body.collideWorldBounds = true;
 
 		//create enemy
 
@@ -57,7 +57,7 @@ function create(){
 		game.physics.arcade.enable(baddie);
 		baddie.body.gravity.y = 600;
 		baddie.body.bounce.y = 0.4;
-		baddie.body.collideWorldBound = true;
+		baddie.body.collideWorldBounds = true;
 
 		//create stars
 	stars = game.add.physicsGroup();
@@ -114,7 +114,7 @@ function update(){
 	//call function move Enemy
 	moveEnemy();
 
-	if(lives = 0){
+	if(lives == 0){
 		endGame()
 	}
 
@@ -141,7 +141,7 @@ function moveEnemy(){
 }
 
 function loseLife(player, baddie){
-	lives = lives - 1; //same as lives = lives -1
+	lives = lives - 1; 
 	lifetext.setText(lives);
 
 	baddie.kill();
