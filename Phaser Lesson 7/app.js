@@ -53,7 +53,39 @@ function create(){
 
 		//create enemy
 
-	baddie = game.add.sprite(30, 30, 'baddie')
+	baddie1 = game.add.sprite(30, 30, 'baddie')
+		baddie.animations.add('left', [0,1],10,true);
+		baddie.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie);
+		baddie.body.gravity.y = 600;
+		baddie.body.bounce.y = 0.4;
+		baddie.body.collideWorldBounds = true;
+
+	baddie2= game.add.sprite(30, 30, 'baddie')
+		baddie.animations.add('left', [0,1],10,true);
+		baddie.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie);
+		baddie.body.gravity.y = 600;
+		baddie.body.bounce.y = 0.4;
+		baddie.body.collideWorldBounds = true;
+
+	baddie3 = game.add.sprite(30, 30, 'baddie')
+		baddie.animations.add('left', [0,1],10,true);
+		baddie.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie);
+		baddie.body.gravity.y = 600;
+		baddie.body.bounce.y = 0.4;
+		baddie.body.collideWorldBounds = true;
+
+	baddie4 = game.add.sprite(30, 30, 'baddie')
+		baddie.animations.add('left', [0,1],10,true);
+		baddie.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie);
+		baddie.body.gravity.y = 600;
+		baddie.body.bounce.y = 0.4;
+		baddie.body.collideWorldBounds = true;
+
+	baddie5 = game.add.sprite(30, 30, 'baddie')
 		baddie.animations.add('left', [0,1],10,true);
 		baddie.animations.add('right', [2,3],10,true);
 		game.physics.arcade.enable(baddie);
@@ -186,15 +218,6 @@ function collectStar(player, star){
 	star.kill();
 	star.reset(Math.random()* 759, 0);
 
-	if(score %50 == 0){
-		baddie = game.add.sprite(30, 30, 'baddie')
-		baddie.animations.add('left', [0,1],10,true);
-		baddie.animations.add('right', [2,3],10,true);
-		game.physics.arcade.enable(baddie);
-		baddie.body.gravity.y = 600;
-		baddie.body.bounce.y = 0.4;
-		baddie.body.collideWorldBounds = true;
-	}
 }
 
 function collectDiamonds(player, diamond){
