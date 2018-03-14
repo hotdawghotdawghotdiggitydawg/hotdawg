@@ -73,7 +73,7 @@ function create(){
 	diamonds = game.add.physicsGroup();
 	diamonds.enableBody = true;
 	for (var i = 0; i < 1; i++){
-		var diamond = diamonds.create(i * 70,0, 'diamond' );
+		var diamond = diamonds.create(Math.random()*750,0, 'diamond' );
 		diamond.body.gravity.y = 100;
 		diamond.body.bounce.y = 0.1 + Math.random()* 0.8;
 	}
@@ -82,7 +82,7 @@ function create(){
 	firstaids = game.add.physicsGroup();
 	firstaids.enableBody = true;
 	for (var i = 0; i < 1; i++){
-		var firstaid = firstaids.create(i * 70,0, 'firstaid' );
+		var firstaid = firstaids.create(Math.random()*750,0, 'firstaid' );
 		firstaid.body.gravity.y = 100;
 		firstaid.body.bounce.y = 0.1 + Math.random()* 0.8;
 	}
