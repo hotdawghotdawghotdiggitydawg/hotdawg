@@ -123,7 +123,7 @@ function update(){
 
 function endGame(){
 	player.kill();
-	scoreLabel.text = "YOU DIED! You scored " + score;
+	scorelabel.text = "YOU DIED! You scored " + score;
 	scoretext.visible = false;
 	lifelabel.visible = false;
 	lifetext.visible = false;
