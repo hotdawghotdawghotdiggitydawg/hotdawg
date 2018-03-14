@@ -70,19 +70,19 @@ function create(){
 		star.body.bounce.y = 0.1 + Math.random()* 0.8;
 	}
 
-	diamond = game.add.physicsGroup();
-	diamond.enableBody = true;
+	diamonds = game.add.physicsGroup();
+	diamonds.enableBody = true;
 	for (var i = 0; i < 1; i++){
-		var diamond = diamond.create(i * 70,0, 'diamond' );
+		var diamond = diamonds.create(i * 70,0, 'diamond' );
 		diamond.body.gravity.y = 100;
 		diamond.body.bounce.y = 0.1 + Math.random()* 0.8;
 	}
 
 
-	firstaid = game.add.physicsGroup();
-	firstaid.enableBody = true;
+	firstaids = game.add.physicsGroup();
+	firstaids.enableBody = true;
 	for (var i = 0; i < 1; i++){
-		var firstaid = firstaid.create(i * 70,0, 'firstaid' );
+		var firstaid = firstaids.create(i * 70,0, 'firstaid' );
 		firstaid.body.gravity.y = 100;
 		firstaid.body.bounce.y = 0.1 + Math.random()* 0.8;
 	}
