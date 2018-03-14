@@ -175,7 +175,11 @@ function update(){
 	game.physics.arcade.overlap(player, firstaids, addLife);
 
 	//call function move Enemy
-	moveEnemy();
+	moveEnemy1();
+	moveEnemy2();
+	moveEnemy3();
+	moveEnemy4();
+	moveEnemy5();
 
 	if(lives == 0){
 		endGame()
