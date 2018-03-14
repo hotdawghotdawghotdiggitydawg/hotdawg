@@ -175,7 +175,7 @@ function addLife(player, firstaid){
 	lives = lives + 1; 
 	lifetext.setText(lives);
 
-	firstaids.kill();
+	firstaid.kill();
 	firstaid.reset(Math.random()* 759, 0);	
 }
 
@@ -191,7 +191,7 @@ function collectDiamonds(player, diamond){
 	score += 10;
 	scoretext.setText(score);
 
-	diamonds.kill();
+	diamond.kill();
 	diamond.reset(Math.random()* 759, 0);
 }
 
