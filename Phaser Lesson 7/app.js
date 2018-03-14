@@ -6,6 +6,8 @@ function preload(){
 	game.load.image('sky','assets/sky.png');
 	game.load.image('ground', 'assets/platform.png');
 	game.load.image('star', 'assets/star.png');
+	game.load.image('firstaid', 'assets/firstaid.png');
+	game.load.image('diamond', 'assets/diamond.png');
 	game.load.spritesheet('dude', 'assets/dude.png',32,48);
 	game.load.spritesheet('baddie', 'assets/baddie.png',32,32);
 }
@@ -68,6 +70,23 @@ function create(){
 		star.body.bounce.y = 0.1 + Math.random()* 0.8;
 	}
 
+	diamond = game.add.physicsGroup();
+	diamond.enableBody = true;
+	for (var i = 0; i < 12; i++){
+		var diamond = diamond.create(i * 70,0, 'diamond' );
+		diamond.body.gravity.y = 100;
+		diamond.body.bounce.y = 0.1 + Math.random()* 0.8;
+	}
+
+
+	firstaid = game.add.physicsGroup();
+	firstaid.enableBody = true;
+	for (var i = 0; i < 12; i++){
+		var firstaid = firstaid.create(i * 70,0, 'firstaid' );
+		firstaid.body.gravity.y = 100;
+		firstaid.body.bounce.y = 0.1 + Math.random()* 0.8;
+	}
+
 	//create keyboard entries
 	cursors = game.input.keyboard.createCursorKeys();
 
@@ -85,6 +104,8 @@ function update(){
 	game.physics.arcade.collide(player, platforms);
 	game.physics.arcade.collide(stars, platforms);
 	game.physics.arcade.collide(baddie, platforms);
+	game.physics.arcade.collide(firstaid, platforms);
+	game.physics.arcade.collide(diamond, platforms);
 
 	//set player velocity to 0 if now events
 	player.body.velocity.x = 0;
@@ -109,7 +130,9 @@ function update(){
 
 	//lesson 9
 	game.physics.arcade.overlap(player, stars, collectStar);
+	game.physics.arcade.overlap(player, diamond, collectDiamond);
 	game.physics.arcade.overlap(player, baddie, loseLife);
+	game.physics.arcade.overlap(player, firstaid, addLife);
 
 	//call function move Enemy
 	moveEnemy();
@@ -148,6 +171,14 @@ function loseLife(player, baddie){
 	baddie.reset(20,20);	
 }
 
+function addLife(player, firstaid){
+	lives = lives + 1; 
+	lifetext.setText(lives);
+
+	firstaid.kill();
+	firstaid.reset(Math.random()* 759, 0);	
+}
+
 function collectStar(player, star){
 	score += 1;
 	scoretext.setText(score);
@@ -155,4 +186,13 @@ function collectStar(player, star){
 	star.kill();
 	star.reset(Math.random()* 759, 0);
 }
+
+function collectDiamond(player, diamond){
+	score += 10;
+	scoretext.setText(score);
+
+	diamond.kill();
+	diamond.reset(Math.random()* 759, 0);
+}
+
 
