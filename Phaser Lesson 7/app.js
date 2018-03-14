@@ -53,45 +53,45 @@ function create(){
 
 		//create enemy
 
-	baddie1 = game.add.sprite(30, 30, 'baddie')
-		baddie.animations.add('left', [0,1],10,true);
-		baddie.animations.add('right', [2,3],10,true);
-		game.physics.arcade.enable(baddie);
-		baddie.body.gravity.y = 600;
-		baddie.body.bounce.y = 0.4;
-		baddie.body.collideWorldBounds = true;
+	baddie1 = game.add.sprite(Math.random()*759, 30, 'baddie')
+		baddie1.animations.add('left', [0,1],10,true);
+		baddie1.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie1);
+		baddie1.body.gravity.y = 600;
+		baddie1.body.bounce.y = 0.4;
+		baddie1.body.collideWorldBounds = true;
 
-	baddie2= game.add.sprite(30, 30, 'baddie')
-		baddie.animations.add('left', [0,1],10,true);
-		baddie.animations.add('right', [2,3],10,true);
-		game.physics.arcade.enable(baddie);
-		baddie.body.gravity.y = 600;
-		baddie.body.bounce.y = 0.4;
-		baddie.body.collideWorldBounds = true;
+	baddie2= game.add.sprite(Math.random()*759, 30, 'baddie')
+		baddie2.animations.add('left', [0,1],10,true);
+		baddie2.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie2);
+		baddie2.body.gravity.y = 600;
+		baddie2.body.bounce.y = 0.4;
+		baddie2.body.collideWorldBounds = true;
 
-	baddie3 = game.add.sprite(30, 30, 'baddie')
-		baddie.animations.add('left', [0,1],10,true);
-		baddie.animations.add('right', [2,3],10,true);
-		game.physics.arcade.enable(baddie);
-		baddie.body.gravity.y = 600;
-		baddie.body.bounce.y = 0.4;
-		baddie.body.collideWorldBounds = true;
+	baddie3 = game.add.sprite(Math.random()*759, 30, 'baddie')
+		baddie3.animations.add('left', [0,1],10,true);
+		baddie3.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie3);
+		baddie3.body.gravity.y = 600;
+		baddie3.body.bounce.y = 0.4;
+		baddie3.body.collideWorldBounds = true;
 
-	baddie4 = game.add.sprite(30, 30, 'baddie')
-		baddie.animations.add('left', [0,1],10,true);
-		baddie.animations.add('right', [2,3],10,true);
-		game.physics.arcade.enable(baddie);
-		baddie.body.gravity.y = 600;
-		baddie.body.bounce.y = 0.4;
-		baddie.body.collideWorldBounds = true;
+	baddie4 = game.add.sprite(Math.random()*759, 30, 'baddie')
+		baddie4.animations.add('left', [0,1],10,true);
+		baddie4.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie4);
+		baddie4.body.gravity.y = 600;
+		baddie4.body.bounce.y = 0.4;
+		baddie4.body.collideWorldBounds = true;
 
-	baddie5 = game.add.sprite(30, 30, 'baddie')
-		baddie.animations.add('left', [0,1],10,true);
-		baddie.animations.add('right', [2,3],10,true);
-		game.physics.arcade.enable(baddie);
-		baddie.body.gravity.y = 600;
-		baddie.body.bounce.y = 0.4;
-		baddie.body.collideWorldBounds = true;
+	baddie5 = game.add.sprite(Math.random()*759, 30, 'baddie')
+		baddie5.animations.add('left', [0,1],10,true);
+		baddie5.animations.add('right', [2,3],10,true);
+		game.physics.arcade.enable(baddie5);
+		baddie5.body.gravity.y = 600;
+		baddie5.body.bounce.y = 0.4;
+		baddie5.body.collideWorldBounds = true;
 
 		//create stars
 	stars = game.add.physicsGroup();
@@ -184,13 +184,49 @@ function endGame(){
 	lifetext.visible = false;
 }
 
-function moveEnemy(){
-	if(baddie.x > 759){
-		baddie.animations.play('left');
-		baddie.body.velocity.x = -120;
-	}else if(baddie.x < 405){
-		baddie.animations.play('right');
-		baddie.body.velocity.x = 120;
+function moveEnemy1(){
+	if(baddie1.x > 759){
+		baddie1.animations.play('left');
+		baddie1.body.velocity.x = -120;
+	}else if(baddie1.x < 405){
+		baddie1.animations.play('right');
+		baddie1.body.velocity.x = 120;
+	}
+
+	function moveEnemy2(){
+	if(baddie2.x > 759){
+		baddie2.animations.play('left');
+		baddie2.body.velocity.x = -120;
+	}else if(baddie2.x < 405){
+		baddie2.animations.play('right');
+		baddie2.body.velocity.x = 120;
+	}
+
+	function moveEnemy3(){
+	if(baddie3.x > 759){
+		baddie3.animations.play('left');
+		baddie3.body.velocity.x = -120;
+	}else if(baddie3.x < 405){
+		baddie3.animations.play('right');
+		baddie3.body.velocity.x = 120;
+	}
+
+	function moveEnemy4(){
+	if(baddie4.x > 759){
+		baddie4.animations.play('left');
+		baddie4.body.velocity.x = -120;
+	}else if(baddie4.x < 405){
+		baddie4.animations.play('right');
+		baddie4.body.velocity.x = 120;
+	}
+
+	function moveEnemy5(){
+	if(baddie5.x > 759){
+		baddie5.animations.play('left');
+		baddie5.body.velocity.x = -120;
+	}else if(baddie5.x < 405){
+		baddie5.animations.play('right');
+		baddie5.body.velocity.x = 120;
 	}
 
 }
