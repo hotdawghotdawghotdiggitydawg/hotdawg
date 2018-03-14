@@ -192,6 +192,7 @@ function moveEnemy1(){
 		baddie1.animations.play('right');
 		baddie1.body.velocity.x = 120;
 	}
+}
 
 	function moveEnemy2(){
 	if(baddie2.x > 759){
@@ -201,6 +202,7 @@ function moveEnemy1(){
 		baddie2.animations.play('right');
 		baddie2.body.velocity.x = 120;
 	}
+}
 
 	function moveEnemy3(){
 	if(baddie3.x > 759){
@@ -210,6 +212,7 @@ function moveEnemy1(){
 		baddie3.animations.play('right');
 		baddie3.body.velocity.x = 120;
 	}
+}
 
 	function moveEnemy4(){
 	if(baddie4.x > 759){
@@ -219,7 +222,7 @@ function moveEnemy1(){
 		baddie4.animations.play('right');
 		baddie4.body.velocity.x = 120;
 	}
-
+}
 	function moveEnemy5(){
 	if(baddie5.x > 759){
 		baddie5.animations.play('left');
