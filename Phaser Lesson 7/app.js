@@ -135,7 +135,11 @@ function create(){
 function update(){
 	game.physics.arcade.collide(player, platforms);
 	game.physics.arcade.collide(stars, platforms);
-	game.physics.arcade.collide(baddie, platforms);
+	game.physics.arcade.collide(baddie1, platforms);
+	game.physics.arcade.collide(baddie2, platforms);
+	game.physics.arcade.collide(baddie3, platforms);
+	game.physics.arcade.collide(baddie4, platforms);
+	game.physics.arcade.collide(baddie5, platforms);
 	game.physics.arcade.collide(firstaids, platforms);
 	game.physics.arcade.collide(diamonds, platforms);
 
@@ -163,7 +167,11 @@ function update(){
 	//lesson 9
 	game.physics.arcade.overlap(player, stars, collectStar);
 	game.physics.arcade.overlap(player, diamonds, collectDiamonds);
-	game.physics.arcade.overlap(player, baddie, loseLife);
+	game.physics.arcade.overlap(player, baddie1, loseLife);
+	game.physics.arcade.overlap(player, baddie2, loseLife);
+	game.physics.arcade.overlap(player, baddie3, loseLife);
+	game.physics.arcade.overlap(player, baddie4, loseLife);
+	game.physics.arcade.overlap(player, baddie5, loseLife);
 	game.physics.arcade.overlap(player, firstaids, addLife);
 
 	//call function move Enemy
