@@ -104,8 +104,8 @@ function update(){
 	game.physics.arcade.collide(player, platforms);
 	game.physics.arcade.collide(stars, platforms);
 	game.physics.arcade.collide(baddie, platforms);
-	game.physics.arcade.collide(firstaid, platforms);
-	game.physics.arcade.collide(diamond, platforms);
+	game.physics.arcade.collide(firstaids, platforms);
+	game.physics.arcade.collide(diamonds, platforms);
 
 	//set player velocity to 0 if now events
 	player.body.velocity.x = 0;
@@ -175,8 +175,8 @@ function addLife(player, firstaid){
 	lives = lives + 1; 
 	lifetext.setText(lives);
 
-	firstaid.kill();
-	firstaid.reset(Math.random()* 759, 0);	
+	firstaids.kill();
+	firstaids.reset(Math.random()* 759, 0);	
 }
 
 function collectStar(player, star){
@@ -191,8 +191,8 @@ function collectDiamond(player, diamond){
 	score += 10;
 	scoretext.setText(score);
 
-	diamond.kill();
-	diamond.reset(Math.random()* 759, 0);
+	diamonds.kill();
+	diamonds.reset(Math.random()* 759, 0);
 }
 
 
