@@ -130,9 +130,9 @@ function update(){
 
 	//lesson 9
 	game.physics.arcade.overlap(player, stars, collectStar);
-	game.physics.arcade.overlap(player, diamond, collectDiamond);
+	game.physics.arcade.overlap(player, diamonds, collectDiamond);
 	game.physics.arcade.overlap(player, baddie, loseLife);
-	game.physics.arcade.overlap(player, firstaid, addLife);
+	game.physics.arcade.overlap(player, firstaids, addLife);
 
 	//call function move Enemy
 	moveEnemy();
