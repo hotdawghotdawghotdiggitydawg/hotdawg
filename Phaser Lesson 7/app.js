@@ -60,6 +60,7 @@ function create(){
 		baddie1.body.gravity.y = 600;
 		baddie1.body.bounce.y = 0.4;
 		baddie1.body.collideWorldBounds = true;
+		baddie1.body.velocity.x = -120;
 
 	baddie2= game.add.sprite(Math.random()*759, 30, 'baddie')
 		baddie2.animations.add('left', [0,1],10,true);
@@ -68,6 +69,7 @@ function create(){
 		baddie2.body.gravity.y = 600;
 		baddie2.body.bounce.y = 0.4;
 		baddie2.body.collideWorldBounds = true;
+		baddie2.body.velocity.x = -120;
 
 	baddie3 = game.add.sprite(Math.random()*759, 30, 'baddie')
 		baddie3.animations.add('left', [0,1],10,true);
@@ -76,6 +78,7 @@ function create(){
 		baddie3.body.gravity.y = 600;
 		baddie3.body.bounce.y = 0.4;
 		baddie3.body.collideWorldBounds = true;
+		baddie3.body.velocity.x = -120;
 
 	baddie4 = game.add.sprite(Math.random()*759, 30, 'baddie')
 		baddie4.animations.add('left', [0,1],10,true);
@@ -84,6 +87,7 @@ function create(){
 		baddie4.body.gravity.y = 600;
 		baddie4.body.bounce.y = 0.4;
 		baddie4.body.collideWorldBounds = true;
+		baddie4.body.velocity.x = -120;
 
 	baddie5 = game.add.sprite(Math.random()*759, 30, 'baddie')
 		baddie5.animations.add('left', [0,1],10,true);
@@ -92,6 +96,7 @@ function create(){
 		baddie5.body.gravity.y = 600;
 		baddie5.body.bounce.y = 0.4;
 		baddie5.body.collideWorldBounds = true;
+		baddie5.body.velocity.x = -120;
 
 		//create stars
 	stars = game.add.physicsGroup();
